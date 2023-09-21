@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+:root{
+    --cor-verdeAgua: #00C4B4;
+}
+*{
+    margin: 0;
+    padding: 0;
+    /* font-family: 'Arial'; */
+    font-family: 'Open Sans';
+}
+body{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.header{
+    background-color: var(--cor-verdeAgua);
+    width: 100%;
+    height: 13vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.header a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    margin-left: 100px;
+}
+.container{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    width: 100%;
+}
+
+.divDireita{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55%;
+    margin-top: 20px;
+    /* background-color: blue; */
+}
+.divEsquerda{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    width: 45%;
+    /* background-color: red; */
+}
+.divFormulario{
+    text-align: center;
+    width: 50%;
+    margin-top: -100px;
+    /* height: 50vh; */
+    background-color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    padding: 80px 40px 60px 40px;
+}
+.divFormulario h1{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    text-align: center;
+    color: #444444;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #E9EDF3;
+    margin-bottom: 25px;
+    width: 100%;
+}
+.divFormulario h2{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: #444444;
+    margin-bottom: 40px;
+}
+.divFormulario input{
+    width: 100%;
+    border: 0;
+    padding-bottom: 12px;
+    padding-left: 5px;
+    cursor: text;
+    color: #444444;
+    font-weight: 400;
+    font-size: 16px;
+    outline: none;
+    transition: all .3s;
+    border-radius: 0;
+}
+.divFormulario input::placeholder{
+    color: #b0b0b0;
+}
+.divInputs > div{
+    display: flex;
+    position: relative;
+    align-items: center;
+    border-bottom: 1px solid #E9EDF3;
+    line-height: 19px;
+    margin-bottom: 30px;
+}
+.divInputs > div > i{
+    color: var(--cor-verdeAgua);
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+.divInputs button{
+    margin-top: 20px;
+    width: 90%;
+    height: 35px;
+    border-radius: 20px;
+    font-size: 15px;
+    transition: all .3s;
+}
+.buttonOff{
+    border: solid 1px rgba(132, 132, 132, 0.818);
+}
+.buttonOk{
+    border: none;
+    color: white;
+    background-color: var(--cor-verdeAgua);
+}
+
+
+.semErro{
+    display: none;
+}
+.comErro{
+    bottom: -20px;
+    right: 10px;
+    position: absolute;
+    display: flex;
+    font-size: 10px;
+    color: red;
+}

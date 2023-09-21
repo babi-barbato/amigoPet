@@ -15,7 +15,7 @@ body {
 }
 .dog{
   z-index: 1;
-  height: 649px;
+  height: 550px;
   position: absolute;
   top: -211px;
   right: 140px;
@@ -27,7 +27,7 @@ body {
   position: absolute;
   top: -311px;
   right: 93px;
-  height: 652px;
+  height: 555px;
 }
 
 a {
@@ -183,7 +183,6 @@ h6 {
   transition: all 0.5s;
   z-index: 997;
   padding: 15px 0;
-  top: 40px;
   box-shadow: 0px 2px 15px rgba(25, 119, 204, 0.1);
 }
 

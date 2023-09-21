@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./assets/css/login.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amigo Pet | Login</title>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html"><i style="margin-right: 4px;" class="bi bi-arrow-left"></i> Voltar ao início</a>
+    </div>
+    <div class="container">
+
+        <div class="divDireita">
+            <img src="./assets/img/loginDesenho.svg" alt="">
+        </div>
+        <div class="divEsquerda">
+            <div class="divFormulario">
+                <h1>Entre no Amigo Pet</h1>
+                <h2>Entre com seu e-mail cadastrado</h2>
+                <div class="divInputs">
+                    <div>
+                        <i class="bi bi-envelope"></i>
+                        <input id="iptEmail" type="email" oninput="verifica(), dois()" placeholder="Digite seu e-mail">
+                        <p id="PerroEmail" class="semErro"><i style="margin-right: 4px;" class="bi bi-exclamation-circle"></i>Preencha o campo</p>
+                    </div>
+                    <div>
+                        <i class="bi bi-shield-lock"></i>
+                        <input id="iptSenha" type="password" oninput="verifica()" placeholder="Digite sua senha">
+                    </div>
+                    <button id="btnLogar" class="buttonOff" onclick="logar()" disabled>Logar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function dois(){
+
+    }
+
+    function verifica(){
+        var btn = document.querySelector('#btnLogar');
+        var email = document.getElementById('iptEmail').value;
+        var senha = document.getElementById('iptSenha').value;
+        var erroEmail = document.querySelector('#PerroEmail');
+        var erro = 0;
+
+
+        if(senha.length <= 0 || email.length <= 0){
+            erro ++;
+        }
+
+        if(email.length <= 0){
+            erroEmail.classList.add('comErro');
+            erroEmail.classList.remove('semErro');
+        }else{
+            erroEmail.classList.remove('comErro');
+            erroEmail.classList.add('semErro');
+        }
+        
+        if(erro == 0){
+            btn.classList.add('buttonOk')
+            btn.classList.remove('buttonOff')
+            
+        }else{
+            btn.classList.remove('buttonOk')
+            btn.classList.add('buttonOff')
+        }
+    }
+
+</script>
